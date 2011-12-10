@@ -17,30 +17,5 @@ public class GutCheckActivity extends Activity {
         
         //start background service
         startService(new Intent(GutCheckService.class.getName()));
-        
-        //get notification manager
-        String ns = Context.NOTIFICATION_SERVICE;
-        NotificationManager mNotificationManager = (NotificationManager)getSystemService(ns);
-        
-        //instantiate notification
-        int icon = R.drawable.ic_launcher;
-        CharSequence tickerText = "What are you doing right now";
-        long now = System.currentTimeMillis();
-        Notification notification = new Notification(icon, tickerText, now);
-        
-        //Define message and pending intent
-        Context context = getApplicationContext();
-        CharSequence contentTitle = "Gut Check";
-        CharSequence contentText = "Am I being as productive as possible right now?";
-        Intent notificationIntent = new Intent(this, GutCheckActivity.class);
-        PendingIntent contentIntent= PendingIntent.getActivity(this, 0, notificationIntent, 0);
-        notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
-        
-        //set options
-        notification.defaults |= Notification.DEFAULT_ALL;
-        
-        //pass notification to manager
-        int NOTIF_ID = 1;
-        mNotificationManager.notify(NOTIF_ID, notification);
     }
 }
