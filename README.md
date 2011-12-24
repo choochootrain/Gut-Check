@@ -7,9 +7,9 @@ An Android app adapted from Mike Myatt's [idea](http://www.forbes.com/sites/bret
 
 Components
 ----------
-* BootReciever
-    Starts a background service on startup
-*GutCheckService
-    Background service which creates a notification every hour
-*GutCheckActivity
-    Activity which records your response to notification
++   BootReciever
+        Starts a background service on startup
++   GutCheckService
+        Background service which creates a notification every hour
++   GutCheckActivity
+        Activity which records your response to notification
