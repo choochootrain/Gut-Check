@@ -8,6 +8,7 @@
     <string name="notification_ticker">What are you doing right now</string>
     <string name="notification_title">Gut Check</string>
     <string name="notification_text">Are you being productive?</string>
+    <string name="notification_multiple">pending item</string>
     
     <string name="about">About</string>
     <string name="about_name">About Gut Check</string>

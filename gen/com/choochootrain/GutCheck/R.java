@@ -47,13 +47,14 @@ public final class R {
         public static final int main=0x7f060000;
     }
     public static final class string {
-        public static final int about=0x7f050008;
-        public static final int about_close=0x7f05000c;
-        public static final int about_issues=0x7f05000b;
-        public static final int about_name=0x7f050009;
-        public static final int about_source=0x7f05000a;
+        public static final int about=0x7f050009;
+        public static final int about_close=0x7f05000d;
+        public static final int about_issues=0x7f05000c;
+        public static final int about_name=0x7f05000a;
+        public static final int about_source=0x7f05000b;
         public static final int app_name=0x7f050002;
         public static final int no_pending_items=0x7f050000;
+        public static final int notification_multiple=0x7f050008;
         public static final int notification_text=0x7f050007;
         public static final int notification_ticker=0x7f050005;
         public static final int notification_title=0x7f050006;

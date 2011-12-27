@@ -33,8 +33,7 @@ public class GutCheckActivity extends Activity {
         pendingLabel = (TextView)findViewById(R.id.pending_label);
         
         //start background service
-        //startService(new Intent(GutCheckService.class.getName()));
-        //mItems = GutCheckService.NOTIFICATION_ITEMS;
+        startService(new Intent(GutCheckService.class.getName()));
         
         //get pending item data
         getPendingItems();
