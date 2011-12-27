@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         
+        <activity
+            android:label="@string/about_name"
+            android:name=".AboutActivity" />
+        
         <service
         	android:name=".GutCheckService"    
             android:process=":remote" android:icon="@drawable/ic_launcher">
@@ -30,7 +34,7 @@
             </intent-filter>
         </service>
         <receiver 
-            android:name=".BootReceiver">
+            android:name=".boot.BootReceiver">
             <intent-filter>
                 <action
                     android:name="android.intent.action.BOOT_COMPLETED">

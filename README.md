@@ -10,3 +10,4 @@ Components
 +   BootReciever - Starts a background service on startup
 +   GutCheckService - Background service which creates a notification every hour
 +   GutCheckActivity - Activity which records your response to notification
++   AboutActivity - Activity with version info, source code, issue tracker

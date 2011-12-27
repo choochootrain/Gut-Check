@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <ImageView
+	            android:id="@+id/about_image"
+	            android:layout_width="150dp"
+	            android:layout_height="150dp"
+	            android:src="@drawable/ic_launcher"
+	            android:layout_centerInParent="true" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+	        <TextView
+	            android:id="@+id/about_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/app_name"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:layout_centerInParent="true" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+	        
+        	<TextView
+	            android:id="@+id/about_version"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text=""
+	            android:layout_centerInParent="true" />
+            
+        </RelativeLayout>
+
+        <View
+        	android:layout_width="fill_parent"
+        	android:layout_height="30dp">
+    	</View>    
+            
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        	
+            <TextView
+	            android:id="@+id/about_source"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/about_source" 
+	            android:layout_centerInParent="true" />
+            
+        </RelativeLayout>
+        
+        <View
+        	android:layout_width="fill_parent"
+        	android:layout_height="30dp">
+    	</View>
+            
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        	
+            <TextView
+	            android:id="@+id/about_issues"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/about_issues" 
+	            android:layout_centerInParent="true" />
+            
+        </RelativeLayout>
+
+        <View
+        	android:layout_width="fill_parent"
+        	android:layout_height="30dp">
+    	</View>  
+          
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/about_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/about_close" />
+            
+        </RelativeLayout>
+    </LinearLayout>

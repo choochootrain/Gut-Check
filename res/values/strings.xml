@@ -8,5 +8,11 @@
     <string name="notification_ticker">What are you doing right now</string>
     <string name="notification_title">Gut Check</string>
     <string name="notification_text">Are you being productive?</string>
+    
+    <string name="about">About</string>
+    <string name="about_name">About Gut Check</string>
+    <string name="about_source">The source code is available at <a href="http://github.com/choochootrain/Gut-Check">http://github.com/choochootrain/Gut-Check</a>.</string>
+    <string name="about_issues">Any bugs or issues can be reported at <a href="http://github.com/choochootrain/Gut-Check/issues">http://github.com/choochootrain/Gut-Check/issues</a>.</string>
+	<string name="about_close">Close</string>
 
 </resources>

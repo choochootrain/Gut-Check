@@ -1,4 +1,6 @@
-package com.choochootrain.GutCheck;
+package com.choochootrain.GutCheck.boot;
+
+import com.choochootrain.GutCheck.GutCheckService;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
