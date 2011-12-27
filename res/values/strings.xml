@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="question">Are you being productive right now?</string>
+	<string name="no_pending_items">No pending items</string>
+    <string name="pending_items">Are you being productive?</string>
     <string name="app_name">Gut Check</string>
-    <string name="submit_yes">Yes</string>
-    <string name="submit_no">No</string>
+    <string name="submit_yes"><b>Yes</b></string>
+    <string name="submit_no"><b>No</b></string>
+    <string name="notification_ticker">What are you doing right now</string>
+    <string name="notification_title">Gut Check</string>
+    <string name="notification_text">Are you being productive?</string>
 
 </resources>

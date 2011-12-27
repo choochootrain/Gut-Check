@@ -1,7 +1,11 @@
 package com.choochootrain.GutCheck;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import com.choochootrain.GutCheck.Item.Item;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -18,13 +22,14 @@ public class GutCheckService extends Service {
 	  private static final String TAG = GutCheckService.class.getSimpleName();
 	  private static final long UPDATE_INTERVAL = 5 * 1000L; //1 hour
 	  private Timer timer;
-	  private final IBinder mBinder = new ActivityBinder();
-	 
+	  private final IBinder mBinder = new ActivityBinder(); 
+	  public static int NOTIF_ID = 0;
+	  public static ArrayList<Item> NOTIFICATION_ITEMS = new ArrayList<Item>();
 	  private TimerTask updateTask = new TimerTask() {
 	    @Override
 	    public void run() {
 	      Log.i(TAG, "Timer task doing work");
-	      startNotification();
+	      startNotification(new Date());
 	    }
 	  };
 	 
@@ -57,7 +62,7 @@ public class GutCheckService extends Service {
 		  }
 	  }
 	  
-	  private void startNotification()
+	  private void startNotification(Date time)
 	  {
 		  //get notification manager
 		  String ns = Context.NOTIFICATION_SERVICE;
@@ -65,24 +70,25 @@ public class GutCheckService extends Service {
 		  
 		  //instantiate notification
 		  int icon = R.drawable.ic_launcher;
-		  CharSequence tickerText = "What are you doing right now";
+		  CharSequence tickerText = NOTIF_ID + " " + getString(R.string.notification_ticker);
 		  long now = System.currentTimeMillis();
 		  Notification notification = new Notification(icon, tickerText, now);
 		  
 		  //Define message and pending intent
 		  Context context = getApplication();
-		  CharSequence contentTitle = "Gut Check";
-		  CharSequence contentText = "Am I being as productive as possible right now?";
+		  CharSequence contentTitle = getString(R.string.notification_title);
+		  CharSequence contentText = getString(R.string.notification_text);
 		  Intent notificationIntent = new Intent(context, GutCheckActivity.class);
 		  PendingIntent contentIntent= PendingIntent.getActivity(context, 0, notificationIntent, 0);
 		  notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 		  
 		  //set options
 		  notification.defaults |= Notification.DEFAULT_ALL;
-		  notification.flags |= Notification.FLAG_NO_CLEAR;
+		  notification.flags |= Notification.FLAG_AUTO_CANCEL;
 		  
-		  //pass notification to manager
-		  int NOTIF_ID = 1;
+		  //pass notification and id to manager
+		  NOTIF_ID++;
+		  NOTIFICATION_ITEMS.add(new Item(NOTIF_ID, time));
 		  mNotificationManager.notify(NOTIF_ID, notification);
 	  }
 }

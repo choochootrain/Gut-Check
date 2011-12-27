@@ -4,40 +4,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:baselineAligned="true" >
+       <LinearLayout
+           android:id="@+id/linearLayout1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:orientation="vertical" >
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical" >
+           <TextView
+               android:id="@+id/pending_label"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="" />
+   	
+       	<ListView
+       		android:id="@+id/pending_items"
+       		android:layout_width="match_parent"
+       		android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/question" />
-
-            <Button
-                android:id="@+id/button_yes"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/submit_yes" />
-            
-            <Button
-                android:id="@+id/button_no"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/submit_no" />
-            
-        </LinearLayout>
-
-    </LinearLayout>
-
+       </LinearLayout>
+        	
 </LinearLayout>
