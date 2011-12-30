@@ -16,12 +16,12 @@ import android.widget.Toast;
 import com.choochootrain.GutCheck.GutCheckActivity;
 import com.choochootrain.GutCheck.R;
 
-public class ItemAdapter extends ArrayAdapter<Item> {
+public class ItemArrayAdapter extends ArrayAdapter<Item> {
 
     private ArrayList<Item> items;
     private Context context;
 
-    public ItemAdapter(Context context, int textViewResourceId, ArrayList<Item> items) {
+    public ItemArrayAdapter(Context context, int textViewResourceId, ArrayList<Item> items) {
             super(context, textViewResourceId, items);
             this.items = items;
             this.context = context;

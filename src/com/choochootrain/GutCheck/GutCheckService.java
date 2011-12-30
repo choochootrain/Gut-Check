@@ -5,8 +5,6 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.choochootrain.GutCheck.Item.Item;
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -16,6 +14,9 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
+
+import com.choochootrain.GutCheck.Item.Item;
+import com.choochootrain.GutCheck.Item.ItemDbAdapter;
 
 public class GutCheckService extends Service {
 	 
@@ -27,6 +28,7 @@ public class GutCheckService extends Service {
 	  private static int ITEM_ID = 0;
 	  public static ArrayList<Item> PENDING_ITEMS = new ArrayList<Item>();
 	  private Notification notification;
+	  private ItemDbAdapter dbAdapter;
 	  
 	  private TimerTask updateTask = new TimerTask() {
 	    @Override
@@ -48,6 +50,8 @@ public class GutCheckService extends Service {
 	 
 	    timer = new Timer("GutCheckTimer");
 	    timer.schedule(updateTask, 1000L, UPDATE_INTERVAL);
+	    dbAdapter = new ItemDbAdapter(this);
+	    dbAdapter.open();
 	  }
 	 
 	  @Override
@@ -86,6 +90,9 @@ public class GutCheckService extends Service {
 		  //add pending item
 		  ITEM_ID++;
 		  PENDING_ITEMS.add(new Item(ITEM_ID, time));
+		  
+		  //write to database
+		  dbAdapter.createItem(time, true, true);
 		  
 		  //Define message and pending intent
 		  Context context = getApplication();

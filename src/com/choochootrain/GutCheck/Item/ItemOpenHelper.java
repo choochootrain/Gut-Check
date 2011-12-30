@@ -1,4 +1,4 @@
-package com.choochootrain.GutCheck.database;
+package com.choochootrain.GutCheck.Item;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,11 +9,8 @@ public class ItemOpenHelper extends SQLiteOpenHelper {
 
 	private static final int DATABASE_VERSION = 1;
 	private static final String DATABASE_NAME = "GutCheckDatabase";
-	private static final String TABLE_NAME = "ITEMS";
-	private static final String ID_COL = "_id";
-	private static final String TIME_COL = "time";
-	private static final String RESULT_COL = "result";
-	private static final String DATE_COL = "created_date";
+	public static final String ITEM_TABLE_NAME = "ITEMS";
+	public static final String[] COLUMNS = {"_id", "time", "result", "pending", "created_date"};
 	
 	public ItemOpenHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -26,11 +23,12 @@ public class ItemOpenHelper extends SQLiteOpenHelper {
 	//	created_date DATETIME DEFAULT CURRENT_VALUE)
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL("CREATE TABLE " + TABLE_NAME + " (" +
-					ID_COL 		+ " INTEGER PRIMARY KEY AUTOINCREMENT," +
-					TIME_COL 	+ " DATETIME," 							+
-					RESULT_COL 	+ " INTEGER," 							+
-					DATE_COL 	+ " DATETIME DEFAULT CURRENT_VALUE" 	+
+		db.execSQL("CREATE TABLE " + ITEM_TABLE_NAME + " (" +
+					COLUMNS[0]	+ " INTEGER PRIMARY KEY AUTOINCREMENT," +
+					COLUMNS[1]	+ " DATETIME," 							+
+					COLUMNS[2] 	+ " INTEGER," 							+
+					COLUMNS[3]	+ " INTEGER,"							+
+					COLUMNS[4]	+ " DATETIME DEFAULT CURRENT_VALUE" 	+
 					");");
 	}
 

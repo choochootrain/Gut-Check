@@ -13,12 +13,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.choochootrain.GutCheck.Item.Item;
-import com.choochootrain.GutCheck.Item.ItemAdapter;
+import com.choochootrain.GutCheck.Item.ItemArrayAdapter;
 
 public class GutCheckActivity extends Activity {
 	
 	private ArrayList<Item> mItems = new ArrayList<Item>();;
-	private ItemAdapter adapter;
+	private ItemArrayAdapter adapter;
 	private ListView pendingItems;
 	private TextView pendingLabel;
 	
@@ -41,7 +41,7 @@ public class GutCheckActivity extends Activity {
         //set appropriate label
         setLabel();
         
-        adapter = new ItemAdapter(this, R.layout.row, mItems);
+        adapter = new ItemArrayAdapter(this, R.layout.row, mItems);
         pendingItems.setAdapter(adapter);
     }
     
