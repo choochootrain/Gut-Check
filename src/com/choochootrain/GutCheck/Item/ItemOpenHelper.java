@@ -17,10 +17,11 @@ public class ItemOpenHelper extends SQLiteOpenHelper {
 	}
 
 	//CREATE TABLE ITEMS ( 
-	//	_id INTEGER PRIMARY KEY AUTOINCREMENT,
-	// 	time DATETIME,
-	//	result INTEGER,
-	//	created_date DATETIME DEFAULT CURRENT_VALUE)
+	//	_id 			INTEGER PRIMARY KEY AUTOINCREMENT,
+	// 	time 			DATETIME,
+	//	result 			INTEGER,
+	//	pending 		INTEGER,
+	//	created_date 	DATETIME)
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE " + ITEM_TABLE_NAME + " (" +
@@ -28,13 +29,13 @@ public class ItemOpenHelper extends SQLiteOpenHelper {
 					COLUMNS[1]	+ " DATETIME," 							+
 					COLUMNS[2] 	+ " INTEGER," 							+
 					COLUMNS[3]	+ " INTEGER,"							+
-					COLUMNS[4]	+ " DATETIME DEFAULT CURRENT_VALUE" 	+
+					COLUMNS[4]	+ " DATETIME"							+
 					");");
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
+
 	}
 
 }

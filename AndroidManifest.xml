@@ -25,6 +25,10 @@
             android:label="@string/about_name"
             android:name=".AboutActivity" />
         
+        <activity
+            android:label="@string/all_items_name"
+            android:name=".AllItemsActivity" />
+        
         <service
         	android:name=".GutCheckService"    
             android:process=":remote" android:icon="@drawable/ic_launcher">

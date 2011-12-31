@@ -91,7 +91,7 @@ public class GutCheckService extends Service {
 		  ITEM_ID++;
 		  PENDING_ITEMS.add(new Item(ITEM_ID, time));
 		  
-		  //write to database
+		  //write pending item to database
 		  dbAdapter.createItem(time, true, true);
 		  
 		  //Define message and pending intent

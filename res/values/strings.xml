@@ -15,5 +15,8 @@
     <string name="about_source">The source code is available at <a href="http://github.com/choochootrain/Gut-Check">http://github.com/choochootrain/Gut-Check</a>.</string>
     <string name="about_issues">Any bugs or issues can be reported at <a href="http://github.com/choochootrain/Gut-Check/issues">http://github.com/choochootrain/Gut-Check/issues</a>.</string>
 	<string name="about_close">Close</string>
+	
+    <string name="all_items">View all items</string>
+    <string name="all_items_name">All Items</string>
 
 </resources>

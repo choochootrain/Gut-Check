@@ -59,6 +59,9 @@ public class GutCheckActivity extends Activity {
         case R.id.about:
             startActivity(new Intent(this,AboutActivity.class));
             return true;
+        case R.id.all_items:
+        	startActivity(new Intent(this,AllItemsActivity.class));
+            return true;
         default:
             return super.onOptionsItemSelected(item);
         }

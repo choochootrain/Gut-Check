@@ -8,6 +8,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.format.DateFormat;
 
 public class ItemDbAdapter {
 
@@ -36,6 +37,7 @@ public class ItemDbAdapter {
     	values.put("time", dateFormat.format(dt));
     	values.put("result", result ? 1 : 0);
     	values.put("pending", pending ? 1 : 0);
+    	values.put("created_date", dateFormat.format(new Date()));
     	return db.insert(ItemOpenHelper.ITEM_TABLE_NAME, null, values);
     }
     
