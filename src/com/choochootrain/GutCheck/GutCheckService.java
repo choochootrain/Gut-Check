@@ -92,7 +92,7 @@ public class GutCheckService extends Service {
 		  PENDING_ITEMS.add(new Item(ITEM_ID, time));
 		  
 		  //write pending item to database
-		  dbAdapter.createItem(time, true, true);
+		  dbAdapter.createItem(time);
 		  
 		  //Define message and pending intent
 		  Context context = getApplication();

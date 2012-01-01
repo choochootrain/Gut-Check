@@ -5,9 +5,9 @@ import java.util.Date;
 public class Item {
 	
 	private Date time;
-	private int id;
+	private long id;
 	
-	public Item(int n, Date t) {
+	public Item(long n, Date t) {
 		id = n;
 		time = t;
 	}
@@ -20,11 +20,11 @@ public class Item {
 		this.time = time;
 	}
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 }

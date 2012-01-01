@@ -20,11 +20,13 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
 
     private ArrayList<Item> items;
     private Context context;
+    private ItemDbAdapter dbAdapter;
 
-    public ItemArrayAdapter(Context context, int textViewResourceId, ArrayList<Item> items) {
+    public ItemArrayAdapter(Context context, int textViewResourceId, ArrayList<Item> items, ItemDbAdapter adapter) {
             super(context, textViewResourceId, items);
             this.items = items;
             this.context = context;
+            dbAdapter = adapter;
     }
 
     @Override
@@ -63,5 +65,6 @@ public class ItemArrayAdapter extends ArrayAdapter<Item> {
 		GutCheckActivity activity = (GutCheckActivity)context;
 		activity.removeItem(o);
 		Toast.makeText(getContext(), "" + o.getId(), Toast.LENGTH_SHORT).show();
+		dbAdapter.updateItem(o.getId(), b);
 	}
 }
