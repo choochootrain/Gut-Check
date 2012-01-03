@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.choochootrain.GutCheck.Item.Item;
 import com.choochootrain.GutCheck.Item.ItemArrayAdapter;
@@ -27,6 +29,7 @@ public class GutCheckActivity extends Activity {
     private ItemArrayAdapter adapter;
     private ListView pendingItems;
     private TextView pendingLabel;
+    private RelativeLayout noItemsLayout;
     private ItemDbAdapter dbAdapter;
 
     /**
@@ -40,6 +43,7 @@ public class GutCheckActivity extends Activity {
         //get views
         pendingItems = (ListView) findViewById(R.id.pending_items);
         pendingLabel = (TextView) findViewById(R.id.pending_label);
+        noItemsLayout = (RelativeLayout) findViewById(R.id.no_items_layout);
 
         //get db
         dbAdapter = new ItemDbAdapter(this);
@@ -82,10 +86,13 @@ public class GutCheckActivity extends Activity {
     }
 
     private void setLabel() {
-        if (mItems.size() != 0)
-            pendingLabel.setText(R.string.pending_items);
-        else
-            pendingLabel.setText(R.string.no_pending_items);
+        if (mItems.size() != 0) {
+            noItemsLayout.setVisibility(View.GONE);
+            pendingLabel.setVisibility(View.GONE);
+        } else {
+            noItemsLayout.setVisibility(View.VISIBLE);
+            pendingLabel.setVisibility(View.VISIBLE);
+        }
     }
 
     private void getPendingItems() {

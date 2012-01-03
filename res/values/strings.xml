@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="no_pending_items">No pending items</string>
-    <string name="pending_items">Are you being productive?</string>
+    <string name="no_pending_items">No pending items</string>
     <string name="app_name">Gut Check</string>
-    <string name="submit_yes"><b>Yes</b></string>
-    <string name="submit_no"><b>No</b></string>
+    <string name="submit_yes">
+        <b>Yes</b>
+    </string>
+    <string name="submit_no">
+        <b>No</b>
+    </string>
     <string name="notification_ticker">What are you doing right now</string>
     <string name="notification_title">Gut Check</string>
     <string name="notification_text">Are you being productive?</string>
     <string name="notification_multiple">pending item</string>
-    
+
     <string name="about">About</string>
     <string name="about_name">About Gut Check</string>
-    <string name="about_source">The source code is available at <a href="http://github.com/choochootrain/Gut-Check">http://github.com/choochootrain/Gut-Check</a>.</string>
-    <string name="about_issues">Any bugs or issues can be reported at <a href="http://github.com/choochootrain/Gut-Check/issues">http://github.com/choochootrain/Gut-Check/issues</a>.</string>
-	<string name="about_close">Close</string>
-	
+    <string name="about_source">The source code is available at<a href="http://github.com/choochootrain/Gut-Check">
+        http://github.com/choochootrain/Gut-Check</a>.
+    </string>
+    <string name="about_issues">Any bugs or issues can be reported at<a
+            href="http://github.com/choochootrain/Gut-Check/issues">http://github.com/choochootrain/Gut-Check/issues</a>
+        .
+    </string>
+    <string name="about_close">Close</string>
+
     <string name="all_items">View all items</string>
     <string name="all_items_name">All Items</string>
 
