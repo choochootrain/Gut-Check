@@ -27,4 +27,8 @@
     <string name="all_items">View all items</string>
     <string name="all_items_name">All Items</string>
 
+    <string name="calendar">Calendar</string>
+    <string name="calendar_prev">prev</string>
+    <string name="calendar_next">next</string>
+
 </resources>

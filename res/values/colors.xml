@@ -1,4 +1,7 @@
 <resources>
     <color name="button_red">#FFFF0000</color>
     <color name="button_green">#FF00FF00</color>
+    <color name="button_yellow">#FFEEEE00</color>
+    <color name="title_light_red">#FFAA1133</color>
+    <color name="title_dark_red">#FF660022</color>
 </resources>

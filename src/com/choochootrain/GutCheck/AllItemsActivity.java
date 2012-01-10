@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.SimpleCursorAdapter;
+import com.choochootrain.GutCheck.Item.AllItemsCursorAdapter;
 import com.choochootrain.GutCheck.Item.ItemDbAdapter;
 import com.choochootrain.GutCheck.Item.ItemOpenHelper;
 
@@ -29,7 +30,7 @@ public class AllItemsActivity extends ListActivity {
         int[] to = new int[]{R.id.time_entry, R.id.result_entry};
 
         //create adapter
-        SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(this, R.layout.all_items_row, cursor, columns, to);
+        SimpleCursorAdapter mAdapter = new AllItemsCursorAdapter(this, R.layout.all_items_row, cursor, columns, to);
         this.setListAdapter(mAdapter);
     }
 }

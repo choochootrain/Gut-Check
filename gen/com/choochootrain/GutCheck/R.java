@@ -10,69 +10,76 @@ package com.choochootrain.GutCheck;
 public final class R {
     public static final class attr {
     }
-
     public static final class color {
-        public static final int button_green = 0x7f040001;
-        public static final int button_red = 0x7f040000;
+        public static final int button_green=0x7f040001;
+        public static final int button_red=0x7f040000;
+        public static final int button_yellow=0x7f040002;
+        public static final int title_dark_red=0x7f040004;
+        public static final int title_light_red=0x7f040003;
     }
-
     public static final class drawable {
-        public static final int ic_launcher = 0x7f020000;
+        public static final int ic_launcher=0x7f020000;
     }
-
     public static final class id {
-        public static final int about = 0x7f070015;
-        public static final int about_close = 0x7f07000b;
-        public static final int about_image = 0x7f070002;
-        public static final int about_issues = 0x7f070009;
-        public static final int about_source = 0x7f070007;
-        public static final int about_title = 0x7f070003;
-        public static final int about_version = 0x7f070005;
-        public static final int all_items = 0x7f070016;
-        public static final int button_no = 0x7f070014;
-        public static final int button_yes = 0x7f070013;
-        public static final int linearLayout1 = 0x7f070000;
-        public static final int linearLayout2 = 0x7f070011;
-        public static final int no_items_layout = 0x7f07000e;
-        public static final int pending_items = 0x7f070010;
-        public static final int pending_label = 0x7f07000f;
-        public static final int relativeLayout1 = 0x7f070001;
-        public static final int relativeLayout2 = 0x7f070004;
-        public static final int relativeLayout3 = 0x7f070006;
-        public static final int relativeLayout4 = 0x7f070008;
-        public static final int relativeLayout5 = 0x7f07000a;
-        public static final int result_entry = 0x7f07000d;
-        public static final int time = 0x7f070012;
-        public static final int time_entry = 0x7f07000c;
+        public static final int about=0x7f07001a;
+        public static final int about_close=0x7f07000b;
+        public static final int about_image=0x7f070002;
+        public static final int about_issues=0x7f070009;
+        public static final int about_source=0x7f070007;
+        public static final int about_title=0x7f070003;
+        public static final int about_version=0x7f070005;
+        public static final int all_items=0x7f07001b;
+        public static final int button_no=0x7f070019;
+        public static final int button_yes=0x7f070018;
+        public static final int calendar=0x7f070013;
+        public static final int current_month=0x7f070011;
+        public static final int items_calendar=0x7f07001c;
+        public static final int linearLayout1=0x7f070000;
+        public static final int linearLayout2=0x7f07000f;
+        public static final int next_month=0x7f070012;
+        public static final int no_items_layout=0x7f070014;
+        public static final int pending_items=0x7f070016;
+        public static final int pending_label=0x7f070015;
+        public static final int prev_month=0x7f070010;
+        public static final int relativeLayout1=0x7f070001;
+        public static final int relativeLayout2=0x7f070004;
+        public static final int relativeLayout3=0x7f070006;
+        public static final int relativeLayout4=0x7f070008;
+        public static final int relativeLayout5=0x7f07000a;
+        public static final int result_entry=0x7f07000e;
+        public static final int result_layout=0x7f07000d;
+        public static final int time=0x7f070017;
+        public static final int time_entry=0x7f07000c;
     }
-
     public static final class layout {
-        public static final int about = 0x7f030000;
-        public static final int all_items_row = 0x7f030001;
-        public static final int main = 0x7f030002;
-        public static final int pending = 0x7f030003;
-        public static final int row = 0x7f030004;
+        public static final int about=0x7f030000;
+        public static final int all_items_row=0x7f030001;
+        public static final int calendar=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int pending=0x7f030004;
+        public static final int row=0x7f030005;
     }
-
     public static final class menu {
-        public static final int main = 0x7f060000;
+        public static final int main=0x7f060000;
     }
-
     public static final class string {
-        public static final int about = 0x7f050008;
-        public static final int about_close = 0x7f05000c;
-        public static final int about_issues = 0x7f05000b;
-        public static final int about_name = 0x7f050009;
-        public static final int about_source = 0x7f05000a;
-        public static final int all_items = 0x7f05000d;
-        public static final int all_items_name = 0x7f05000e;
-        public static final int app_name = 0x7f050001;
-        public static final int no_pending_items = 0x7f050000;
-        public static final int notification_multiple = 0x7f050007;
-        public static final int notification_text = 0x7f050006;
-        public static final int notification_ticker = 0x7f050004;
-        public static final int notification_title = 0x7f050005;
-        public static final int submit_no = 0x7f050003;
-        public static final int submit_yes = 0x7f050002;
+        public static final int about=0x7f050008;
+        public static final int about_close=0x7f05000c;
+        public static final int about_issues=0x7f05000b;
+        public static final int about_name=0x7f050009;
+        public static final int about_source=0x7f05000a;
+        public static final int all_items=0x7f05000d;
+        public static final int all_items_name=0x7f05000e;
+        public static final int app_name=0x7f050001;
+        public static final int calendar=0x7f05000f;
+        public static final int calendar_next=0x7f050011;
+        public static final int calendar_prev=0x7f050010;
+        public static final int no_pending_items=0x7f050000;
+        public static final int notification_multiple=0x7f050007;
+        public static final int notification_text=0x7f050006;
+        public static final int notification_ticker=0x7f050004;
+        public static final int notification_title=0x7f050005;
+        public static final int submit_no=0x7f050003;
+        public static final int submit_yes=0x7f050002;
     }
 }

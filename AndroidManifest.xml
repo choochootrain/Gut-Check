@@ -28,7 +28,11 @@
         <activity
             android:label="@string/all_items_name"
             android:name=".AllItemsActivity" />
-        
+
+        <activity
+            android:label="@string/calendar"
+            android:name=".CalendarActivity"/>
+
         <service
         	android:name=".GutCheckService"    
             android:process=":remote" android:icon="@drawable/ic_launcher">

@@ -80,6 +80,9 @@ public class GutCheckActivity extends Activity {
             case R.id.all_items:
                 startActivity(new Intent(this, AllItemsActivity.class));
                 return true;
+            case R.id.items_calendar:
+                startActivity(new Intent(this, CalendarActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
